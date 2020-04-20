@@ -39,7 +39,7 @@ public class Meny {
 		
 		
 		while(!ferdig) {
-			System.out.println("\nSkriv inn et tall mellom 0 og 13. 0 for å avslutte programmet");
+			System.out.println("\nSkriv inn et tall mellom 0 og 8. 0 for å avslutte programmet");
 			
 			try {
 				valgStr = leser.nextLine();
@@ -183,9 +183,6 @@ public class Meny {
 	private Ansatt lesInnAnsatt() {
 		System.out.println("\nLes inn en ny ansatt");
 		
-		System.out.println("Skriv inn brukernavn:");
-		String brukernavn = leser.nextLine();
-		
 		System.out.println("Skriv inn fornavn:");
 		String fornavn = leser.nextLine();
 		
@@ -207,7 +204,7 @@ public class Meny {
 		int avdID = Integer.parseInt(leser.nextLine());
 		Avdeling avd = avdDAO.finnAvdelingMedId(avdID);
 		
-		Ansatt a = new Ansatt(brukernavn, fornavn, etternavn, dato, stilling, lonn, avd);
+		Ansatt a = new Ansatt(fornavn, etternavn, dato, stilling, lonn, avd);
 		return a;
 	}
 	

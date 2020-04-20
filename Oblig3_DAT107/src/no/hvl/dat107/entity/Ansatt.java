@@ -37,8 +37,8 @@ public class Ansatt {
 		
 	}
 		
-	public Ansatt(String brukernavn, String fornavn, String etternavn, LocalDate tilsettDato, String stilling, BigDecimal maanedslonn, Avdeling avdeling) {
-		this.brukernavn = brukernavn;
+	public Ansatt(String fornavn, String etternavn, LocalDate tilsettDato, String stilling, BigDecimal maanedslonn, Avdeling avdeling) {
+		this.brukernavn = validerBrukernavn(fornavn, etternavn);
 		this.fornavn = fornavn; 
 		this.etternavn = etternavn; 
 		this.tilsettDato = tilsettDato;
@@ -46,6 +46,22 @@ public class Ansatt {
 		this.maanedslonn = maanedslonn;
 		this.avdeling = avdeling;
 		deltakere = new ArrayList<Prosjektdeltakelse>();
+	}
+	
+	private String validerBrukernavn(String fornavn, String etternavn) {
+		if(fornavn == null || etternavn == null || fornavn.length() == 0 || etternavn.length() == 0 || (fornavn.length() == 1 && etternavn.length() == 1)) {
+			return "N/A";
+			//throw some error
+		} else if(fornavn.length() < 2 && etternavn.length() < 1) {
+			return "" + fornavn.charAt(0) + etternavn.charAt(0) + etternavn.charAt(1);
+			
+		} else if(fornavn.length() > 1 && etternavn.length() < 2) {
+			return "" + fornavn.charAt(0) + fornavn.charAt(1) + etternavn.charAt(0);
+			
+		} else {
+			return "" + fornavn.charAt(0) + fornavn.charAt(1) + etternavn.charAt(0) + etternavn.charAt(1);
+			
+		}
 	}
 	
 	public boolean erSjef() {

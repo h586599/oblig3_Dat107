@@ -61,16 +61,16 @@ VALUES
 
 INSERT INTO Ansatt(brukernavn, fornavn, etternavn, tilsettdato, stilling, maanedslonn, avdelingsID)
 VALUES
-  ('PerP', 'Per', 'Peresen', '2020-06-02', 'Data-ingeniør', 35000, 1),
-  ('CalleC', 'Calle', 'Callesen', '2022-01-24', 'IT', 33000, 2),
-  ('ArveA', 'Arve', 'Arvesen', '2020-11-11', 'APP-Utvikler', 30000, 1),
-  ('JensJ', 'Jens', 'Jensen', '2020-09-30', 'Motivator', 20000, 3),
-  ('StureS', 'Sture', 'Sturesen', '2021-05-14', 'Kjemiker', 31000, 3),
-  ('PetterP', 'Petter', 'Petterson', '2020-12-24', 'Administrator', 36000, 3),
-  ('SynneS', 'Synne', 'Synnesen', '2020-05-09', 'Sekretær', 27000, 2),
-  ('AndreaA', 'Andrea', 'Andreasen', '2021-01-01', 'Fysioterapeut', 25000, 2),
-  ('LeneL', 'Lene', 'Lenesen', '2020-07-24', 'Økonom', 29000, 1),
-  ('StineS', 'Stine', 'Stineson', '2020-04-19', 'Rengjører', 22000, 2);
+  ('PePe', 'Per', 'Peresen', '2020-06-02', 'Data-ingeniør', 35000, 1),
+  ('CaCa', 'Calle', 'Callesen', '2022-01-24', 'IT', 33000, 2),
+  ('ArAr', 'Arve', 'Arvesen', '2020-11-11', 'APP-Utvikler', 30000, 1),
+  ('JeJe', 'Jens', 'Jensen', '2020-09-30', 'Motivator', 20000, 3),
+  ('StSt', 'Sture', 'Sturesen', '2021-05-14', 'Kjemiker', 31000, 3),
+  ('PePo', 'Petter', 'Potter', '2020-12-24', 'Administrator', 36000, 3),
+  ('SySy', 'Synne', 'Synnesen', '2020-05-09', 'Sekretær', 27000, 2),
+  ('AnAn', 'Andrea', 'Andreasen', '2021-01-01', 'Fysioterapeut', 25000, 2),
+  ('LeLe', 'Lene', 'Lenesen', '2020-07-24', 'Økonom', 29000, 1),
+  ('StHu', 'Stine', 'Hurvik', '2020-04-19', 'Rengjører', 80000, 2);
   
   
 ALTER TABLE avdeling 
