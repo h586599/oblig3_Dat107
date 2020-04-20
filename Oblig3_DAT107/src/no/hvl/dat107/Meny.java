@@ -177,6 +177,12 @@ public class Meny {
 			ansDAO.oppdaterAnsattAvdeling(ans, avd);
 			break;
 			
+		case 9:
+			avd = lesInnAvdeling();
+			System.out.println("\nNy ansatt er lagt inn i databasen");
+			avdDAO.leggTilAvdeling(avd);
+			break;
+			
 		}
 	}
 	
@@ -208,6 +214,18 @@ public class Meny {
 		return a;
 	}
 	
+	private Avdeling lesInnAvdeling() {
+		System.out.println("\nLes inn en ny avdeling");
+		
+		System.out.println("Skriv inn navn på avdelingen");
+		String avdNavn = leser.nextLine();
+		
+		System.out.println("Skriv inn id på avdelingsleder (sjef)");
+		Ansatt ansatt = ansDAO.finnAnsattMedBrukernavn(leser.nextLine());
+		
+		return new Avdeling(avdNavn, ansatt);
+	}
+	
 	
 	private void skrivValgAlternativ() {
 		System.out.println("Valgalaternativ");
@@ -219,5 +237,6 @@ public class Meny {
 		System.out.println("6 - Søker etter avdeling med ID");
 		System.out.println("7 - Skriv ut alle ansatte på en avdeling");
 		System.out.println("8 - Oppdater hvilke avdeling en jobber i");	
+		System.out.println("9 - Legg inn en ny avdeling (I ustand!)");
 	}
 }
